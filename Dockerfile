@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Deriving the minima base image
-FROM python:3.8-alpine
+FROM python:3.9-alpine
 
 COPY . /app
 WORKDIR /app
