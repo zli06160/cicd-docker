@@ -1,5 +1,13 @@
-# CICD-Docker 
-A personal practice repo, mainly contains a simple test for the uniswap v2 price calculator.
+# cicd-docker
+A personal practice repo, mainly contains an integration test for the uniswap v2 price calculator.
+
+### How to run the test with Docker
+Build docker image:<br/>
+```docker build -t <your-image-name> .```
+
+Run the docker image as a container on docker environment:<br/>
+```docker run --name <your-container-name> <your-image-name>```
+
 
 ### Branch Architecture
 

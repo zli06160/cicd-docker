@@ -1,12 +1,13 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.8-slim-buster
+# Deriving the minima base image
+FROM python:3.8-alpine
 
+COPY . /app
 WORKDIR /app
+COPY ./ressources/integration_test_data.csv ../ressources/integration_test_data.csv
+RUN pip install -r ./src/requirements.txt
 
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
 
-COPY . .
-
-CMD [ "python3", "-m" , "app", "test"]
+# Command to run the tests
+CMD [ "python3", "./src/app.py"]
