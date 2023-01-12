@@ -1,1 +1,1 @@
-testzli==1.1
+testzli==1.5
